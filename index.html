@@ -193,41 +193,22 @@
                 <div class="caption">Pond Filter Cleaning</div>
             </div>
 
-            <div class="gallery-item gallery-hidden-mobile">
+            <div class="gallery-item">
                 <img src="download (7).gif" alt="Tropical to Marine switch image" width="2000" height="1500">
                 <div class="caption">Tropical to Marine switch</div>
             </div>
 
-            <div class="gallery-item gallery-hidden-tablet">
+            <div class="gallery-item">
                 <img src="download (8).gif" alt="First visit to end result image" width="2000" height="1500">
                 <div class="caption">First visit to end result</div>
             </div>
 
-            <div class="gallery-item gallery-hidden-tablet">
+            <div class="gallery-item">
                 <img src="download (9).gif" alt="Turtle tank before and after image" width="2000" height="1500">
                 <div class="caption">Turtle tank before and after</div>
             </div>
-
-            <div class="gallery-item gallery-hidden-desktop">
-                <img src="Marine tank clean.gif" alt="Marine tank clean before and after image" width="2000" height="1500">
-                <div class="caption">Marine tank clean before and after</div>
-            </div>
-
-            <div class="gallery-item gallery-hidden-desktop">
-                <img src="Filter Cleaning.gif" alt="Filter cleaning image" width="2000" height="1500">
-                <div class="caption">Filter cleaning before and after</div>
-            </div>
-
-        <div class="gallery-item gallery-hidden-desktop">
-                <img src="fish Tank Setup.gif" alt="Marine tank start up" width="2000" height="1500">
-                <div class="caption">Marine tank start up</div>
-            </div>
         </div>
-
-        <div class="gallery-button-container">
-            <button id="toggleGalleryBtn" class="toggle-gallery-btn">Show More</button>
-        </div>
-    </section>
+      </section>
 
      <!-- Water Testing Equipment Gallery -->
       <section id="water-testing" class="gallery-section fade-in">
@@ -249,7 +230,7 @@
         <div class="contact-container">
             <div class="left-contact">
                 <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d310855.3957019772!2d-1.8154096499999999!3d52.5052441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa1f5d642dd1a4909%3A0x4ce31ad00f4d3a14!2sMarine%20and%20tropical%20services!5e0!3m2!1sen!2suk!4v1778236292711!5m2!1sen!2suk" width="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d310855.6779665852!2d-2.1450348873896674!3d52.50520418658081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487080d43225d7fd%3A0x8dc86fdb3abbf3e7!2sWest%20Midlands!5e0!3m2!1sen!2suk!4v1761752989566!5m2!1sen!2suk" width="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map"></iframe>
                 </div>
 
                 <div class="info">
@@ -258,24 +239,24 @@
                     <a href="tel:+447925220331">+44 7925 220331</a><br>
                     <label><strong>Email:</strong></label><br>
                     <a href="mailto:marineandtropicalservices@gmail.com">marineandtropicalservices@gmail.com</a><br>
-                    <label><strong>Leave a review:</strong></label><br>
-                    <a href="https://g.page/r/CRQ6TQ_QGuNMEAI/review" target="_blank">Go to Google Reviews</a>
                 </div>
             </div>
 
             <div class="form-container">
-                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                  <input type="hidden" name="access_key" value="7dfd2cd9-7443-4c00-8161-506f2a6f8be3">
+                <form name="contact" method="POST" data-netlify="true">
+                  <input type="hidden" name="form-name" value="contact">
                   
-                    <input type="text" id="name" name="full-name" placeholder="Your full name" required>
-                    <input type="email" id="email" name="email" placeholder="Your email" required>
-                    <input type="text" id="phone" name="phone" placeholder="Phone number (optional)">
-                    <input type="text" id="address" name="address" placeholder="Home address">
-                    <textarea id="message" name="message" placeholder="What can we help you with" required></textarea>
+                    <input type="text" name="full-name" placeholder="Your full name">
+                    <input type="email" name="email" placeholder="Your email">
+                    <input type="tel" name="phone" placeholder="Phone number (optional)">
+                    <input type="text" name="address" placeholder="Home address">
+                    <textarea name="message" placeholder="What can we help you with"></textarea>
                   
                     <button type="submit">Send</button>
 
-                  <p id="status" style="margin-top: 10px;"></p>
+                  <p id="success-message" style="display:none; color: green; margin-top: 10px;">
+                   Your message has been sent successfully!
+                  </p>
 
                 </form>
             </div>
@@ -287,6 +268,19 @@
             <a href="https://www.tiktok.com/@tedwardle7?_r=1&_t=ZN-95mPLB8ugLb" target="_blank"><i class="fab fa-tiktok"></i></a>
             <a href="https://www.facebook.com/profile.php?id=61567187640373&mibextid=wwXIfr&rdid=R6ByUspuJcO7radv&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AxbL5Adk8%2F%3Fmibextid%3DwwXIfr#" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://wa.me/447925220331" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <div class="payment-methods">
+          <p>
+            We except the following payment methods:
+          </p>
+
+          <div class="payment-icons">
+            <i class="fa-brands fa-apple-pay"></i>
+            <i class="fa-brands fa-google-pay"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-cc-visa"></i>
+          </div>
         </div>
 
             <p class="footer-copy">© 2026 Marine & Tropical Services. All rights reserved.</p>
