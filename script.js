@@ -1,7 +1,3 @@
-// Slides carousel code removed (elements not in HTML)
-
-
-  // my work
 // Allow tap-to-toggle overlay on mobile
 document.querySelectorAll('.image-container').forEach(container => {
   container.addEventListener('click', () => {
@@ -23,6 +19,26 @@ const observer = new IntersectionObserver(entries => {
 });
 
 items.forEach(item => observer.observe(item));
+
+// Gallery show/hide toggle functionality
+const gallery = document.querySelector('.ba-gallery');
+const toggleBtn = document.getElementById('toggleGalleryBtn');
+const hiddenItems = document.querySelectorAll('.gallery-hidden-mobile, .gallery-hidden-tablet, .gallery-hidden-desktop');
+let isExpanded = false;
+
+toggleBtn.addEventListener('click', () => {
+  isExpanded = !isExpanded;
+  gallery.classList.toggle('expanded', isExpanded);
+  toggleBtn.textContent = isExpanded ? 'Show Less' : 'Show More';
+
+  if (isExpanded) {
+    hiddenItems.forEach(item => {
+      setTimeout(() => item.classList.add('show'), 20);
+    });
+  } else {
+    hiddenItems.forEach(item => item.classList.remove('show'));
+  }
+});
 
 
 // site scroll navigation
@@ -206,3 +222,54 @@ window.addEventListener("resize", () => {
 
 renderImages();
 startAutoSwitch();
+
+// Contact form
+document.querySelector("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const status = document.getElementById("status");
+
+  const response = await fetch(form.action, {
+    method: "POST",
+    body: new FormData(form)
+  });
+
+  if (response.ok) {
+    status.style.color = "green"
+    status.textContent = "Message sent successfully!";
+    form.reset();
+  } else {
+    status.style.color = "red"
+    status.textContent = "Something went wrong. Please try again.";
+  }
+});
+
+// Textarea capital letter
+const textarea = document.getElementById("message");
+
+textarea.addEventListener("input", () => {
+  const value = textarea.value;
+  if (value.length > 0) {
+    textarea.value = value.charAt(0).toUpperCase() + value.slice(1);
+  }
+});
+
+// Instant navigation to contact section on page load without animation
+if (window.location.hash === '#contact') {
+  document.documentElement.classList.add('no-scroll-animation');
+  
+  window.addEventListener('load', () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      const navHeight = 105;
+      const scrollPosition = contactSection.offsetTop - navHeight;
+      window.scrollTo(0, scrollPosition);
+    }
+  });
+  
+  // Re-enable smooth scrolling after initial navigation
+  setTimeout(() => {
+    document.documentElement.classList.remove('no-scroll-animation');
+  }, 100);
+}
